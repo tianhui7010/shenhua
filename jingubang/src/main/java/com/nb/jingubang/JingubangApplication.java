@@ -3,7 +3,7 @@ package com.nb.jingubang;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//启动类 F
+//启动类 FF
 @SpringBootApplication
 public class JingubangApplication {
 
