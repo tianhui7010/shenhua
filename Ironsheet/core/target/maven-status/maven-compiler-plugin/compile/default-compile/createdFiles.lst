@@ -1,0 +1,6 @@
+com\example\demo\service\impl\UserServiceImpl.class
+com\example\demo\facade\impl\CarFacadeImpl.class
+com\example\demo\CoreApplication.class
+com\example\demo\service\UserService.class
+com\example\demo\facade\impl\UserFacadeImpl.class
+com\example\demo\repository\UserRepository.class
