@@ -14,13 +14,18 @@ import java.util.List;
  */
 @Entity
 @Table(name = "sys_user")
-public class SysUser implements Serializable{
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue
-    private Long id;
+public class SysUser extends EntityBase{
+//    @Id
+//    @GeneratedValue
+//    private Long id;
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
     @NotEmpty(message = "用户名不能为空")
     private String userName;
     @NotEmpty(message = "密码不能为空")
@@ -33,14 +38,6 @@ public class SysUser implements Serializable{
     private List<SysRole> roleList;
 
     public SysUser() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUserName() {

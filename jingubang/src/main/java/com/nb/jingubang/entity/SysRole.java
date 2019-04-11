@@ -12,16 +12,22 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "sys_role")
-public class SysRole implements Serializable{
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue
-    private Long id;
+public class SysRole extends EntityBase{
 
     /**角色名**/
     private String roleName;
+//
+//    @Id
+//    @GeneratedValue
+//    private Long id;
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     //多对多关系 一个角色对应多个菜单
     @ManyToMany(fetch= FetchType.EAGER)
@@ -36,13 +42,6 @@ public class SysRole implements Serializable{
     public SysRole() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getRoleName() {
         return roleName;

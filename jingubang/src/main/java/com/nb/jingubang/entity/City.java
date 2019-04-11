@@ -1,23 +1,18 @@
 package com.nb.jingubang.entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * 城市
+ * City
  */
 @Entity
 @Table(name="th_city")
 @Data
-public class City implements Serializable{
-
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+public class City extends EntityBase{
 
     /**城市名**/
     private String name;
@@ -37,5 +32,11 @@ public class City implements Serializable{
         this.introduce = introduce;
     }
 
-
+    @Override
+    public String toString() {
+        return "City{" +
+                "name='" + name + '\'' +
+                ", introduce='" + introduce + '\'' +
+                '}';
+    }
 }

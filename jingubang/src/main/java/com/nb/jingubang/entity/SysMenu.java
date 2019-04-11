@@ -11,14 +11,18 @@ import java.util.List;
  */
 @Entity
 @Table(name="sys_menu")
-public class SysMenu implements Serializable{
+public class SysMenu extends EntityBase{
+//    @Id
+//    @GeneratedValue
+//    private Long id;
 
-    private static final long serialVersionUID = 1L;
+//    public Long getId() {
+//        return id;
+//    }
 
-    @Id
-    @GeneratedValue
-    private Long id;
-
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
     /**菜单名**/
     private String menuName;
 
@@ -28,14 +32,6 @@ public class SysMenu implements Serializable{
     private List<SysRole> roleList;
 
     public SysMenu() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getMenuName() {
